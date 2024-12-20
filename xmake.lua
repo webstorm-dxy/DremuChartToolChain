@@ -4,9 +4,11 @@ add_requires("pybind11", {system=false})
 add_rules("plugin.compile_commands.autoupdate", {outputdir = ".vscode"})
 target("dcc")
     set_kind("shared")
+    add_rules("python.library", {soabi = true})
     add_files("src/*.cpp")
     add_packages("pybind11")
     set_languages("c++20")
+    set_extension(".pyd")
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
