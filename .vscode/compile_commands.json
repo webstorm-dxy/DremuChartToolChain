@@ -1,0 +1,6 @@
+[
+{
+  "directory": "/Users/daxingyi/cpp_project_xmake/pylib/dcc",
+  "arguments": ["/usr/bin/clang", "-c", "-Qunused-arguments", "-fPIC", "-O3", "-std=c++20", "-DNDEBUG", "-o", "build/.objs/dcc/macosx/arm64/release/src/main.cpp.o", "src/main.cpp"],
+  "file": "src/main.cpp"
+}]
