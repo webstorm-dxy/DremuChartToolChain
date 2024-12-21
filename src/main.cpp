@@ -18,5 +18,6 @@ PYBIND11_MODULE(dcc, m) {
   
   py::class_<Project>(m,"Project") //定义类的方法
     .def(py::init())
-    .def("test",&Project::test);
+    .def("test",&Project::test)
+    .def("output_json_file",&Project::output_json_file);
 }

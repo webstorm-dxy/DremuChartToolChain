@@ -9,7 +9,6 @@
 #include <string>
 
 #include "nlohmann/json.hpp"
-#include "nlohmann/json_fwd.hpp"
 
 class Project{
 public:
@@ -28,6 +27,8 @@ public:
      */
     void test();
     void check();
+    void output_yaml_file();
+    void output_json_file(std::string out_path);
 
 private:
     nlohmann::json chart;
