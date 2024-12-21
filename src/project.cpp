@@ -1,12 +1,18 @@
 #include <iostream>
 #include <ostream>
 
+
 #include "project.h"
+#include "nlohmann/json.hpp"
+
+using json = nlohmann::json;
 
 Project::Project(){
-    std::cout<<"Cons"<<std::endl;
+    
+    this->chart["Version"] = "20241221";
+    std::cout<<chart<<std::endl;
 }
 
 void Project::test(){
-    std::cout<<"Hello world this message print from c++"<<std::endl;
+    std::cout<<"Dremu Chart ToolChain Version 20241221"<<std::endl;
 }

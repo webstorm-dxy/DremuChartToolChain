@@ -1,12 +1,16 @@
 add_rules("mode.debug", "mode.release")
 
 add_requires("pybind11", {system=false})
+add_requires("vcpkg::nlohmann-json")
+
+
 add_rules("plugin.compile_commands.autoupdate", {outputdir = ".vscode"})
 target("dcc")
     set_kind("shared")
     add_rules("python.library", {soabi = true})
     add_files("src/*.cpp")
     add_packages("pybind11")
+    add_packages("vcpkg::nlohmann-json")
     set_languages("c++20")
     set_extension(".pyd")
 
